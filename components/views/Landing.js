@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
-import fullpage from "fullpage.js";
-import Navbar from "../sections/Navbar/Navbar.js";
+// import fullpage from "fullpage.js";
+import Navbar from "../sections/Navbar/Navbar";
 import Footer from "../sections/Footer/Footer.js";
 import Banner from "../sections/Banner/Banner.js";
 import AboutMe from "../sections/AboutMe/AboutMe.js";
@@ -30,20 +30,20 @@ const SectionWrapper = ({ id, children }) => {
 
 export default function Landing() {
   useEffect(() => {
-    if (window.screen.availWidth >= MEDIUM_SCREEN)
-      new fullpage("#fullpage", {
-        licenseKey: "gplv3-license",
-        sectionSelector: ".vertical-scrolling",
-        navigation: true,
-        parallax: true,
-        anchors: AnchorDataList,
-        scrollingSpeed: 500,
-        scrollOverflow: false,
-      });
+    // if (window && window.screen.availWidth >= MEDIUM_SCREEN)
+    //   new fullpage("#fullpage", {
+    //     licenseKey: "gplv3-license",
+    //     sectionSelector: ".vertical-scrolling",
+    //     navigation: true,
+    //     parallax: true,
+    //     anchors: AnchorDataList,
+    //     scrollingSpeed: 500,
+    //     scrollOverflow: false,
+    //   });
   }, []);
   return (
     <>
-      <PreloadBackground />
+      {/* <PreloadBackground /> */}
       <GlowingMouse />
       <div>
         <Navbar />

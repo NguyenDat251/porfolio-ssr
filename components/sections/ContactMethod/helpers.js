@@ -1,6 +1,6 @@
-import { ReactComponent as Github } from "assets/contact-method/contact-github.svg";
-import { ReactComponent as Gmail } from "assets/contact-method/contact-gmail.svg";
-import { ReactComponent as LinkedIn } from "assets/contact-method/contact-linkedln.svg";
+import Github from "assets/contact-method/contact-github.svg";
+import Gmail from "assets/contact-method/contact-gmail.svg";
+import LinkedIn from "assets/contact-method/contact-linkedln.svg";
 
 export const getContactIconComponent = (contactName) => {
   switch (contactName) {

@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import CVButton from "../../CVButton/CVButton";
 import { AnchorDataList } from "../../utils";
-import { ReactComponent as LogoOrigin } from "../../../assets/logo/DLetterLogo.svg";
-import { ReactComponent as LogoDot } from "../../../assets/logo/DDot.svg";
+import LogoOrigin from "../../../assets/logo/DLetterLogo.svg";
+import LogoDot from "../../../assets/logo/DDot.svg";
 import "./Navbar.module.scss";
 
 export default function Navbar() {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   const getMenuItem = (id) => (
     <li key={id}>
@@ -24,11 +24,11 @@ export default function Navbar() {
         href="#"
       >
         <div className="w-12 h-12">
-          <a href="#Greeting" className="logoEffect">
+          <div className="logoEffect">
             <LogoDot className="absolute firstDot dot-transform-animation" />
             <LogoOrigin className="absolute letter transform-animation" />
             <LogoDot className="absolute secondDot dot-transform-animation" />
-          </a>
+          </div>
         </div>
       </a>
       <CVButton />
