@@ -1,0 +1,106 @@
+@import "../../styles/colors.module.scss";
+.card__container {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card__header {
+  @include fontStyle(300, 16px, 12px);
+  color: var(--lighest-slate);
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: #192437;
+  border-radius: 4px;
+  box-shadow: -0.5rem 0 1rem var(--navy);
+  transition: 0.4s ease-out;
+  position: relative;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleCard {
+  color: var(--lighest-slate);
+  font-size: 16px;
+}
+
+@media screen and (min-width: 640px) {
+  .card__container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card__container {
+    display: flex;
+    margin-bottom: 50px;
+    grid-template-columns: auto auto auto; 
+  }
+  
+  .titleCard {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+  }
+
+  .card {
+    height: 5rem;
+    flex-grow: 1;
+    left: 0px;
+    height: 100px;
+  }
+
+  .card:not(:first-child) {
+    margin-left: -50px;
+  }
+
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+    border: 2px solid var(--light-slate);
+    color: var(--white);
+  }
+
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+
+  .bar {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+
+  .emptybar {
+    background-color: var(--lightest-navy);
+    width: 50%;
+    height: 30%;
+  }
+
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 50%;
+    background: rgb(0, 154, 217);
+    background: var(--green);
+    transition: 0.6s ease-out;
+  }
+
+  .card:hover .filledbar {
+    width: 50%;
+    transition: 0.4s ease-out;
+  }
+}

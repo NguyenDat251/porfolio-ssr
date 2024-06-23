@@ -1,0 +1,59 @@
+@keyframes horizontalMove1 {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+
+  40% {
+    margin-left: -74px;
+  }
+}
+
+@keyframes up {
+  0%,
+  100% {
+    bottom: -12px;
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 50px;
+    opacity: 0;
+  }
+}
+
+@keyframes down {
+  0%,
+  100% {
+    bottom: -12px;
+    left: 0;
+    opacity: 1;
+  }
+
+  20%,
+  65% {
+    bottom: -84px;
+    left: -70;
+  }
+
+  40%,
+  45% {
+    bottom: -84px;
+    left: -100px;
+    opacity: 0;
+  }
+}
+
+@keyframes careerFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

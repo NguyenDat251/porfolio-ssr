@@ -1,0 +1,163 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(0px at calc(100% - 45px) 45px);
+  transition: all 0.5s ease-in-out;
+  counter-reset: section_mobile;
+}
+.wrapperOpen {
+  clip-path: circle(75%);
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper ul li {
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper ul li::before {
+  position: relative;
+  display: block;
+  counter-increment: section_mobile 1;
+  content: "0" counter(section_mobile) ".";
+  margin-right: 10px;
+  color: var(--green);
+  font-weight: 400;
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+}
+
+.wrapper ul li a {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.wrapper ul li a:active {
+  background-color: var(--green-tint);
+}
+
+.hamMenuButton {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.hamMenuButton > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+}
+.menu-line {
+  display: block;
+  width: 12px;
+  height: 2px;
+  margin: 5px 0 5px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background-color: var(--green);
+  transition: 500ms;
+  transform-origin: right center;
+}
+.hamMenuButton > div > span:nth-child(4),
+.hamMenuButton > div > span:nth-child(5),
+.hamMenuButton > div > span:nth-child(6) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  transform-origin: left center;
+}
+
+.menuChecked span:nth-child(2),
+.menuChecked span:nth-child(5) {
+  transform: scale(0);
+}
+.menuChecked span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.menuChecked span:nth-child(4) {
+  transform: translateY(12px) rotate(-45deg);
+}
+.menuChecked span:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+.menuChecked span:nth-child(6) {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+// Logo Effect
+.logoEffect {
+  position: relative;
+  top: 6px;
+  left: 5px;
+}
+
+@keyframes transform-effect {
+  0%, 15%, 85%, 100% {
+    transform: rotate(0);
+  }
+
+  25%, 75% {
+    transform: rotate(90deg);
+  }
+}
+
+.transform-animation {
+  width: 32px;
+  height: 32px;
+  animation: transform-effect 5s infinite;
+}
+
+@keyframes dot-transform-effect {
+  0%, 15%, 85%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translate(12px, -22px);
+  }
+}
+
+.dot-transform-animation {
+  animation: dot-transform-effect 5s infinite;
+}
+
+// nav svg {
+//   width: 48px;
+//   height: 48px;
+// }
+
+.firstDot,
+.secondDot {
+  width: 9.3px;
+  height: 9.3px;
+}
+
+.firstDot {
+  left: 2px;
+  top: 11px;
+}
+
+.secondDot {
+  left: 17px;
+  top: 11px;
+}
+
+.letter {
+  left: 10px;
+}

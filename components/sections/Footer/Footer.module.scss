@@ -1,0 +1,142 @@
+@import "../../styles/colors.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lora:wght@500&family=Tilt+Prism&display=swap");
+#footer {
+  background-color: var(--navy-500);
+  color: var(--light-slate);
+}
+
+.horizontal-line {
+  border: 1px solid var(--dark-slate);
+  width: 100%;
+}
+
+.about-me {
+  border-bottom: 3px solid var(--green-500);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeLocation {
+  flex: 3;
+  @include fontStyle(200, 48px, 1.2);
+  color: var(--dark-slate);
+  font-family: "Tilt Prism", cursive;
+}
+
+.weatherLocation {
+  @include fontStyle(200, 32px, 1.2);
+  color: var(--dark-slate);
+  font-family: "Anton", sans-serif;
+}
+
+.summaryInfo {
+  flex: 1;
+  padding: 12px 0px;
+
+  h3 {
+    @include fontStyle(600, 20px, 1.5);
+    color: var(--light-slate);
+    margin-bottom: 12px;
+  }
+}
+
+.summaryInfoSection__header {
+  @include fontStyle(700, 20px, 1.5);
+  color: var(--dark-slate);
+  margin-bottom: 10px;
+}
+
+.summaryInfoSection__content {
+  p {
+    position: relative;
+  }
+  p:before {
+    content: attr(data-length-info);
+    position: absolute;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--green-500);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+    color: transparent;
+  }
+  p:hover:before {
+    visibility: visible;
+    opacity: 1;
+  }
+  p:hover {
+    color: var(--lighest-slate);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .footer-content {
+    margin: 24px;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .summaryInfo {
+    h3 {
+      margin-bottom: 32px;
+    }
+  }
+
+  .timeLocation {
+    font-size: 28px;
+  }
+
+  .weatherLocation {
+    font-size: 28px;
+  }
+
+  .summaryInfoSection__content {
+  p {
+    margin-bottom: 12px;
+  }
+}
+}
+
+@media screen and (min-width: 1024px) {
+  #footer {
+    padding: 24px;
+  }
+
+  .section {
+    display: flex;
+  }
+
+  .summaryInfo {
+    padding: 32px;
+
+    h3 {
+      margin-bottom: 32px;
+    }
+  }
+
+  .timeLocation {
+    font-size: 36px;
+  }
+
+  .weatherLocation {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+    .timeLocation {
+    font-size: 80px;
+  }
+
+  .weatherLocation {
+    font-size: 72px;
+  }
+}
