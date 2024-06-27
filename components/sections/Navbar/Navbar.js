@@ -4,7 +4,7 @@ import CVButton from "../../CVButton/CVButton";
 import { AnchorDataList } from "../../utils";
 import LogoOrigin from "../../../assets/logo/DLetterLogo.svg";
 import LogoDot from "../../../assets/logo/DDot.svg";
-import "./Navbar.module.scss";
+import NavbarStyle from "./Navbar.module.scss";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -24,36 +24,56 @@ export default function Navbar() {
         href="#"
       >
         <div className="w-12 h-12">
-          <div className="logoEffect">
-            <LogoDot className="absolute firstDot dot-transform-animation" />
-            <LogoOrigin className="absolute letter transform-animation" />
-            <LogoDot className="absolute secondDot dot-transform-animation" />
+          <div className={classNames(NavbarStyle.logoEffect)}>
+            <LogoDot
+              className={classNames(
+                NavbarStyle.firstDot,
+                NavbarStyle.dotTransformAnimation,
+                "absolute"
+              )}
+            />
+            <LogoOrigin
+              className={classNames(
+                NavbarStyle.letter,
+                NavbarStyle.transformAnimation,
+                "absolute"
+              )}
+            />
+            <LogoDot
+              className={classNames(
+                NavbarStyle.secondDot,
+                NavbarStyle.dotTransformAnimation,
+                "absolute"
+              )}
+            />
           </div>
         </div>
       </a>
       <CVButton />
       <div
         className={classNames(
-          "wrapper text-white bg-[--light-navy]",
-          navbarOpen ? "wrapperOpen" : ""
+          NavbarStyle.wrapper,
+          "text-white bg-[--light-navy]",
+          navbarOpen ? NavbarStyle.wrapper : ""
         )}
       >
         <ul>{AnchorDataList.map((item) => getMenuItem(item))}</ul>
       </div>
       <div
         className={classNames(
-          "md:hidden hamMenuButton",
-          navbarOpen ? "menuChecked" : ""
+          NavbarStyle.hamMenuButton,
+          "md:hidden ",
+          navbarOpen ? NavbarStyle.menuChecked : ""
         )}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
         <div className="hide-des">
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
-          <span className="menu-line"></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
+          <span className={classNames(NavbarStyle.menuLine)}></span>
         </div>
       </div>
     </nav>

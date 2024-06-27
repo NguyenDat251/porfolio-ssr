@@ -63,7 +63,7 @@
   align-content: center;
   align-items: center;
 }
-.menu-line {
+.menuLine {
   display: block;
   width: 12px;
   height: 2px;
@@ -118,7 +118,7 @@
   }
 }
 
-.transform-animation {
+.transformAnimation {
   width: 32px;
   height: 32px;
   animation: transform-effect 5s infinite;
@@ -133,7 +133,7 @@
   }
 }
 
-.dot-transform-animation {
+.dotTransformAnimation {
   animation: dot-transform-effect 5s infinite;
 }
 

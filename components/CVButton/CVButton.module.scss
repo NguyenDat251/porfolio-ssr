@@ -1,6 +1,6 @@
 @import "../styles/colors.module.scss";
 
-.custom-btn {
+.customBtn {
   width: max-content;
   height: fit-content;
   padding: 8px 16px;
@@ -20,7 +20,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .custom-btn {
+  .customBtn {
     //TODO: this cause border to be bleed. Fix it later
     border-radius: 0px;
     -webkit-mask: conic-gradient(
