@@ -1,5 +1,5 @@
 @import "../../styles/colors.module.scss";
-.card__container {
+.cardContainer {
   width: 80vw;
   display: grid;
   grid-template-columns: auto auto;
@@ -7,7 +7,7 @@
   margin-bottom: 1rem;
 }
 
-.card__header {
+.cardHeader {
   @include fontStyle(300, 16px, 12px);
   color: var(--lighest-slate);
   margin-bottom: 1rem;
@@ -32,13 +32,13 @@
 }
 
 @media screen and (min-width: 640px) {
-  .card__container {
+  .cardContainer {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .card__container {
+  .cardContainer {
     display: flex;
     margin-bottom: 50px;
     grid-template-columns: auto auto auto; 

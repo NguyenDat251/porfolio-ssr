@@ -1,4 +1,5 @@
-import "./MySkill.module.scss";
+import MySkillStyles from "./MySkill.module.scss";
+import classNames from "classnames";
 export default function MySkill() {
   const softwareSkills = ["VSCode", "Github"];
   const softSkills = [
@@ -22,39 +23,48 @@ export default function MySkill() {
   ];
   return (
     <>
-      <h2 className="titleSection">My skill</h2>
-      <span className="card__header">Technologies</span>
-      <div className="card__container">
+      <h2 className={MySkillStyles.titleSection}>My skill</h2>
+      <span className={MySkillStyles.cardHeader}>Technologies</span>
+      <div className={MySkillStyles.cardContainer}>
         {technologies.map((technology, index) => (
-          <div key={index} className="card cursor-pointer">
-            <span className="titleCard">{technology}</span>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+          <div
+            key={index}
+            className={classNames(MySkillStyles.card, "cursor-pointer")}
+          >
+            <span className={MySkillStyles.titleCard}>{technology}</span>
+            <div className={MySkillStyles.bar}>
+              <div className={MySkillStyles.emptybar}></div>
+              <div className={MySkillStyles.filledbar}></div>
             </div>
           </div>
         ))}
       </div>
-      <span className="card__header">Softskills</span>
-      <div className="card__container">
+      <span className={MySkillStyles.cardHeader}>Softskills</span>
+      <div className={MySkillStyles.cardContainer}>
         {softSkills.map((softSkill, index) => (
-          <div key={index} className="card cursor-pointer">
-            <span className="titleCard">{softSkill}</span>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+          <div
+            key={index}
+            className={classNames(MySkillStyles.card, "cursor-pointer")}
+          >
+            <span className={MySkillStyles.titleCard}>{softSkill}</span>
+            <div className={MySkillStyles.bar}>
+              <div className={MySkillStyles.emptybar}></div>
+              <div className={MySkillStyles.filledbar}></div>
             </div>
           </div>
         ))}
       </div>
-      <span className="card__header">Software/Platform</span>
-      <div className="card__container">
+      <span className={MySkillStyles.cardHeader}>Software/Platform</span>
+      <div className={MySkillStyles.cardContainer}>
         {softwareSkills.map((softwareSkill, index) => (
-          <div key={index} className="card cursor-pointer">
-            <span className="titleCard">{softwareSkill}</span>
-            <div className="bar">
-              <div className="emptybar"></div>
-              <div className="filledbar"></div>
+          <div
+            key={index}
+            className={classNames(MySkillStyles.card, "cursor-pointer")}
+          >
+            <span className={MySkillStyles.titleCard}>{softwareSkill}</span>
+            <div className={MySkillStyles.bar}>
+              <div className={MySkillStyles.emptybar}></div>
+              <div className={MySkillStyles.filledbar}></div>
             </div>
           </div>
         ))}
