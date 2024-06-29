@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import LogoDot from "assets/logo/DDot.svg";
+import LogoOrigin from "assets/logo/DLetterLogo.svg";
 import classNames from "classnames";
-import CVButton from "../../CVButton/CVButton";
-import { AnchorDataList } from "../../utils";
-import LogoOrigin from "../../../assets/logo/DLetterLogo.svg";
-import LogoDot from "../../../assets/logo/DDot.svg";
+import CVButton from "components/CVButton/CVButton";
+import { AnchorDataList } from "components/utils";
+import { useState } from "react";
 import NavbarStyle from "./Navbar.module.scss";
 
 export default function Navbar() {
@@ -29,21 +29,21 @@ export default function Navbar() {
               className={classNames(
                 NavbarStyle.firstDot,
                 NavbarStyle.dotTransformAnimation,
-                "absolute"
+                "absolute",
               )}
             />
             <LogoOrigin
               className={classNames(
                 NavbarStyle.letter,
                 NavbarStyle.transformAnimation,
-                "absolute"
+                "absolute",
               )}
             />
             <LogoDot
               className={classNames(
                 NavbarStyle.secondDot,
                 NavbarStyle.dotTransformAnimation,
-                "absolute"
+                "absolute",
               )}
             />
           </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
         className={classNames(
           NavbarStyle.wrapper,
           "text-white bg-[--light-navy]",
-          navbarOpen ? NavbarStyle.wrapper : ""
+          navbarOpen ? NavbarStyle.wrapper : "",
         )}
       >
         <ul>{AnchorDataList.map((item) => getMenuItem(item))}</ul>
@@ -63,7 +63,7 @@ export default function Navbar() {
         className={classNames(
           NavbarStyle.hamMenuButton,
           "md:hidden ",
-          navbarOpen ? NavbarStyle.menuChecked : ""
+          navbarOpen ? NavbarStyle.menuChecked : "",
         )}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >

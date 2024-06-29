@@ -9,8 +9,8 @@ export default function AboutMe() {
         <div className="flex flex-col gap-2 md:gap-2.5">
           <p>
             Hello! My name is Dat. I was born in 1998 in Nha Trang City, a
-            stunning beach. I studied and graduated with a software engineering
-            major in Ho Chi Minh City University of Science in 2020.
+            stunning coastal one. I studied and graduated with a software
+            engineering major in Ho Chi Minh City University of Science in 2020.
           </p>
           <p>
             I have three years of experience in front-end development. I am

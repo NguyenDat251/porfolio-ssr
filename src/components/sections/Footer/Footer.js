@@ -70,22 +70,28 @@ export default function Footer() {
     >
       <hr className={classNames(FooterStyles.horizontalLine, "mb-4")} />
       <div>
-        <div className="section">
-          <div className="timeLocation">
+        <div className={classNames(FooterStyles.section)}>
+          <div className={classNames(FooterStyles.timeLocation)}>
             <div>It&apos;s {timeString} </div>
             {weatherData && (
-              <div className="weatherLocation">
+              <div className={classNames(FooterStyles.weatherLocation)}>
                 {weatherData.weather[0].description} & {weatherData.main.temp}
                 &deg;C
               </div>
             )}
             in Vietnam
           </div>
-          <div className="summaryInfo">
+          <div className={classNames(FooterStyles.summaryInfo)}>
             <h3>Let&apos;s make something great together</h3>
-            <div className="summaryInfoSection">
-              <div className="summaryInfoSection__header">Contact Info</div>
-              <div className="summaryInfoSection__content">
+            <div className={classNames(FooterStyles.summaryInfoSection)}>
+              <div
+                className={classNames(FooterStyles.summaryInfoSectionHeader)}
+              >
+                Contact Info
+              </div>
+              <div
+                className={classNames(FooterStyles.summaryInfoSectionContent)}
+              >
                 <a
                   href="https://www.google.com/maps?q=Thành phố Hồ Chí Minh, Việt Nam"
                   target="_blank"
@@ -113,11 +119,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer-content">
+        <div className={classNames(FooterStyles.footerContent)}>
           <CVButton />
           <div>
             © {new Date().getFullYear()}, built by{" "}
-            <a className="about-me" href="#About">
+            <a className={classNames(FooterStyles.aboutMe)} href="#About">
               Datnguyen
             </a>{" "}
             and hugely inspired by{" "}

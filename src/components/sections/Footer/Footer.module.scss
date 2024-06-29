@@ -11,11 +11,11 @@
   width: 100%;
 }
 
-.about-me {
+.aboutMe {
   border-bottom: 3px solid var(--green-500);
 }
 
-.footer-content {
+.footerContent {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -45,13 +45,13 @@
   }
 }
 
-.summaryInfoSection__header {
+.summaryInfoSectionHeader {
   @include fontStyle(700, 20px, 1.5);
   color: var(--dark-slate);
   margin-bottom: 10px;
 }
 
-.summaryInfoSection__content {
+.summaryInfoSectionContent {
   p {
     position: relative;
   }
@@ -77,7 +77,7 @@
 }
 
 @media screen and (min-width: 640px) {
-  .footer-content {
+  .footerContent {
     margin: 24px;
     flex-direction: row;
     gap: 50px;
@@ -98,7 +98,7 @@
     font-size: 28px;
   }
 
-  .summaryInfoSection__content {
+  .summaryInfoSectionContent {
   p {
     margin-bottom: 12px;
   }
