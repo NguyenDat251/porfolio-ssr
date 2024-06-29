@@ -1,4 +1,4 @@
-.d-1 {
+.d1 {
     --c: #64ffda; /* the color */
     --b: .1em;    /* border length*/
     --d: 20px;    /* the cube depth */
@@ -22,15 +22,15 @@
        var(--d) calc(100% - var(--d))
       );
     transition: 0.5s;
-  }
-  .d-1:hover {
-    clip-path: 
-      polygon(
-       0% var(--d), 
-       var(--d) 0%, 
-       100% 0%, 
-       100% calc(100% - var(--d)), 
-       calc(100% - var(--d)) 100%, 
-       0% 100%
-     );
+
+    &:hover {
+      clip-path: polygon(
+        0% var(--d), 
+        var(--d) 0%, 
+        100% 0%, 
+        100% calc(100% - var(--d)), 
+        calc(100% - var(--d)) 100%, 
+        0% 100%
+      );
+    }
   }
