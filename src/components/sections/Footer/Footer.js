@@ -1,8 +1,8 @@
-import React, { useMemo } from "react";
-import "./Footer.module.scss";
+import classNames from "classnames";
 import CVButton from "components/CVButton/CVButton";
+import { useEffect, useMemo, useState } from "react";
 import ContactMethodFooter from "../ContactMethod/ContactMethodFooter";
-import { useEffect, useState } from "react";
+import FooterStyles from "./Footer.module.scss";
 
 const ONE_MINUTE = 1000 * 60;
 
@@ -10,7 +10,7 @@ export default function Footer() {
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleString("en-US", {
       timeZone: "Asia/Ho_Chi_Minh",
-    })
+    }),
   );
   const [weatherData, setWeatherData] = useState(null);
   const date = useMemo(() => new Date(currentTime), [currentTime]);
@@ -53,7 +53,7 @@ export default function Footer() {
       setCurrentTime(
         new Date().toLocaleString("en-US", {
           timeZone: "Asia/Ho_Chi_Minh",
-        })
+        }),
       );
     }, ONE_MINUTE);
 
@@ -68,7 +68,7 @@ export default function Footer() {
       id="footer"
       className="pt-16 pb-4 lg:pt-0 lg:pb-4 h-screen flex flex-col items-start justify-around md:justify-center"
     >
-      <hr className="horizontal-line mb-4" />
+      <hr className={classNames(FooterStyles.horizontalLine, "mb-4")} />
       <div>
         <div className="section">
           <div className="timeLocation">

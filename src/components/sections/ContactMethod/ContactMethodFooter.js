@@ -1,11 +1,15 @@
-import { contactNames, contactLink } from "./constants";
+import { contactLink, contactNames } from "./constants";
+import ContactMethodStyles from "./ContactMethod.module.scss";
 import { getContactIconComponent } from "./helpers";
 
 export default function ContactMethodFooter() {
   return (
     <div className="flex justify-around md:hidden w-full mt-4">
       {contactNames.map((contactName, index) => (
-        <div className="contact-method__component" key={contactName}>
+        <div
+          className={ContactMethodStyles.contactMethodComponent}
+          key={contactName}
+        >
           {contactName === "Gmail" ? (
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nguyenquocdat2511998@gmail.com "
