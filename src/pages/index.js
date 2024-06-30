@@ -15,6 +15,12 @@ export default function Home() {
           name="description"
           content="Nguyễn Quốc Đạt - Front-end developer"
         ></meta>
+        <meta property="og:title" content="Dat Nguyen Developer" />
+        <meta property="og:image" content="https://i.imgur.com/yWOXtK6.png" />
+        <meta
+          property="og:description"
+          content="Nguyễn Quốc Đạt - Front-end developer. This is a personal website I created to showcase my career."
+        />
       </Head>
       <Landing />
     </div>
