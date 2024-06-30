@@ -1,19 +1,16 @@
-import React from "react";
 import { useEffect } from "react";
 // import fullpage from "fullpage.js";
-import Navbar from "../sections/Navbar/Navbar";
-import Footer from "../sections/Footer/Footer.js";
-import Banner from "../sections/Banner/Banner.js";
+import FadedSection from "../FadedSection/FadedSection";
+import GlowingMouse from "../GlowingMouse/GlowingMouse";
+import RotateSquare from "../RotateSquare/RotateSquare";
 import AboutMe from "../sections/AboutMe/AboutMe.js";
+import Banner from "../sections/Banner/Banner.js";
+import ContactMethod from "../sections/ContactMethod/ContactMethod";
 import Experience from "../sections/Experience/Experience.js";
+import Footer from "../sections/Footer/Footer.js";
 import MyBlog from "../sections/MyBlog/MyBlog";
 import MySkill from "../sections/MySkill/MySkill";
-import ContactMethod from "../sections/ContactMethod/ContactMethod";
-import RotateSquare from "../RotateSquare/RotateSquare";
-import GlowingMouse from "../GlowingMouse/GlowingMouse";
-import FadedSection from "../FadedSection/FadedSection";
-import PreloadBackground from "../PreloadBackground/PreloadBackground";
-import { AnchorDataList } from "../utils.js";
+import Navbar from "../sections/Navbar/Navbar";
 import "./Landing.module.scss";
 
 const MEDIUM_SCREEN = 768;
