@@ -21,6 +21,11 @@ export default function Home() {
           property="og:description"
           content="Nguyễn Quốc Đạt - Front-end developer. This is a personal website I created to showcase my career."
         />
+        <link
+          rel="canonical"
+          href="https://dat-nguyen-developer.com/"
+          key="canonical"
+        />
       </Head>
       <Landing />
     </div>
