@@ -37,16 +37,16 @@ export default function Footer() {
     return rs;
   }, [hours, minutes]);
 
-  useEffect(() => {
-    const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Vietnam&units=metric&appid=7d6488f171786a9b72ec528855be74c6`;
+  // useEffect(() => {
+  //   const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Vietnam&units=metric&appid=7d6488f171786a9b72ec528855be74c6`;
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setWeatherData(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+  //   fetch(apiUrl)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setWeatherData(data);
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
