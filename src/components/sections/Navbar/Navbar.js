@@ -1,8 +1,9 @@
-import LogoDot from "assets/logo/DDot.svg";
-import LogoOrigin from "assets/logo/DLetterLogo.svg";
+import LogoDot from "assets/logo/DDot.svg?url";
+import LogoOrigin from "assets/logo/DLetterLogo.svg?url";
 import classNames from "classnames";
 import CVButton from "components/CVButton/CVButton";
 import { AnchorDataList } from "components/utils";
+import Image from "next/image";
 import { useState } from "react";
 import NavbarStyle from "./Navbar.module.scss";
 
@@ -25,26 +26,41 @@ export default function Navbar() {
       >
         <div className="w-12 h-12">
           <div className={classNames(NavbarStyle.logoEffect)}>
-            <LogoDot
+            <Image
+              src={LogoDot}
+              width={3}
+              height={3}
               className={classNames(
                 NavbarStyle.firstDot,
                 NavbarStyle.dotTransformAnimation,
                 "absolute",
               )}
+              alt="dot-1"
+              unoptimized
             />
-            <LogoOrigin
+            <Image
+              src={LogoOrigin}
+              width={10}
+              height={11}
               className={classNames(
                 NavbarStyle.letter,
                 NavbarStyle.transformAnimation,
                 "absolute",
               )}
+              alt="big-D"
+              unoptimized
             />
-            <LogoDot
+            <Image
+              src={LogoDot}
+              width={3}
+              height={3}
               className={classNames(
                 NavbarStyle.secondDot,
                 NavbarStyle.dotTransformAnimation,
                 "absolute",
               )}
+              alt="dot-2"
+              unoptimized
             />
           </div>
         </div>
